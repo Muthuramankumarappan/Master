@@ -1,0 +1,23 @@
+<div class="login-form">
+<mat-card>
+<form (ngSubmit)='onSubmit(validate)' #validate="ngForm" class="login-form"> 
+    <div ngModelGroup='userdata' #userdata='ngModelGroup' class="example-full-width" >
+        <mat-form-field class="example-full-width">
+                <mat-label> User Name</mat-label>
+                <input matInput  ngModel name="userCred" required email>
+        </mat-form-field>
+    </div>
+    <div ngModelGroup='userdata' #userdata='ngModelGroup' class="example-full-width">
+            <mat-form-field class="example-full-width">
+                    <mat-label>Password</mat-label>
+                    <input matInput ngModel name="passcode" required>
+                    <mat-hint>min 5 characters</mat-hint>
+            </mat-form-field>
+        </div>
+
+    <mat-card-actions>
+        <button mat-raised-button id='login' [disabled] = "!userdata.valid"  color="primary" type="submit">Login</button>
+    </mat-card-actions>
+    </form>
+</mat-card>
+</div>

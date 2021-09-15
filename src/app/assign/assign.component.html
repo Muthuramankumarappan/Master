@@ -1,0 +1,82 @@
+
+<div class="view-assignation">
+        <div class = "view-title">
+        <mat-label class = "heading-label">{{title}}</mat-label>
+        </div>
+        <div class="title-assignation">
+            
+                <div class="outer">
+                    <div class="select-region">
+                    <mat-form-field  class = "select-amt" appearance="fill">
+                            <mat-label >Date:</mat-label>
+                            <mat-select [(value)]="selectedDate">
+                                    <mat-option  [value]="option" *ngFor="let option of todayDate">
+                                        {{ option }}</mat-option>
+                            </mat-select>
+                    </mat-form-field>
+                    
+                    <mat-form-field class = "select-amt" appearance="fill">
+            <mat-label >Branch:</mat-label>
+            <mat-select  [(value)]="selectedBranch">
+            <mat-option [value]="option" *ngFor="let option of branchArray">
+                {{ option }}</mat-option>
+            </mat-select>
+            </mat-form-field>
+                    
+            <mat-form-field class = "select-amt" appearance="fill"> 
+            <mat-label >Portfolio:</mat-label>
+            <mat-select  [(value)]="selectedPortfolio">
+            <mat-option  [value]="option" *ngFor="let option of portfolioArray">
+                {{ option }}</mat-option>
+            </mat-select>
+            </mat-form-field>
+                    
+            <mat-form-field class = "select-amt" appearance="fill">
+            <mat-label >System:</mat-label>
+            <mat-select  [(value)]="selectedSystem">
+            <mat-option [value]="option" *ngFor="let option of systemArray">
+                {{ option }}</mat-option>
+            </mat-select>
+            </mat-form-field>
+                    
+            <mat-form-field class = "select-amt" appearance="fill">
+            <mat-label >Priority:</mat-label>
+            <mat-select  [(value)]="selectedPriority">
+            <mat-option [value]="option" *ngFor="let option of priorityArray">
+                {{ option }}</mat-option>
+            </mat-select>
+            </mat-form-field>
+            </div>
+                <div  class="view-button-row">
+                        <button *ngFor = "let functionality of assignFunction" mat-button color="warn" 
+                        (click)="functionality.label ==='Download' ? functionality.action('something'): functionality.action()">{{functionality.label}}</button>
+                        </div>
+            </div>
+            <div class="row">
+                    <div class="date-select-size">
+                        <mat-label >Number:</mat-label>
+                        <mat-label >{{numbers}}</mat-label>
+                    </div>
+                    <div class="date-select-size"> 
+                    <mat-label >Pending:</mat-label>
+                    <mat-label >{{pending}}</mat-label>
+                </div>
+                <div class="date-select-size">
+                    <mat-label >Total Number:</mat-label>
+                    <mat-label >{{totalNumber}}</mat-label>
+                </div>
+                <div class="date-select-size">
+                    <mat-label >Total Pending:</mat-label>
+                    <mat-label >{{totalPending}}</mat-label>
+                    </div>
+                </div>
+                <mat-tab-group animationDuration="0ms">
+                        <mat-tab label="First"> Content 1 </mat-tab>
+                        <mat-tab label="Second"> Content 2 </mat-tab>
+                        <mat-tab label="Third"> Content 3 </mat-tab>
+                      </mat-tab-group>
+            </div>
+            </div>
+
+
+           

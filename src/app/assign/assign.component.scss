@@ -1,0 +1,47 @@
+.view-title {
+    display: flex;
+    flex:1;
+    // background-color: lightcoral;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.select-amt{
+    padding-left:10px;
+    padding-right:10px;
+    padding-top:20px;
+    font-size: 16px;
+}
+.outer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.select-region{
+
+    display: flex;
+    justify-content: space-evenly;
+    // background-color: lemonchiffon;
+}
+
+
+
+.heading-label{
+    font-size: 24px;
+    font-weight: lighter;
+}
+.date-select-size{
+    display: flex;
+    // float: left;
+    justify-content: space-evenly;
+    padding:20px;
+    // background-color: gray;
+}
+.row{
+    display: flex;
+    // justify-content:  center;
+    // flex-direction: column;
+    // float: left;
+    // background-color: yellow;
+}

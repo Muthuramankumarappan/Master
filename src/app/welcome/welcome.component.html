@@ -1,0 +1,45 @@
+
+<div class="menu-selector">
+        <mat-toolbar color="primary">
+                <mat-toolbar-row>
+                  <span>Application Name</span>
+                  <span class="spacer"></span>
+                  <mat-label class="text-size">Country:</mat-label>
+                  <mat-form-field >
+                            <mat-select style="font-size: 12px;" [(value)]="selectedCountry">
+                              <mat-option style="font-size: 12px;" [value]="option.value" *ngFor="let option of country">
+                                  {{ option.viewValue }}</mat-option>
+                            </mat-select>
+                          </mat-form-field>
+
+                </mat-toolbar-row>
+              
+                <mat-toolbar-row>
+                    <span>
+                        <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+                        <mat-menu #menu="matMenu">
+                           <a routerLink="view" [queryParams] = "viewAssignation"> <button mat-menu-item>menu 1</button> </a>
+                           <a routerLink="assign" ><button mat-menu-item>menu 2 </button> </a>
+                           <a routerLink="view" [queryParams] = "massiveAssignation" > <button mat-menu-item>menu 3</button> </a>
+                           <a routerLink="./" > <button mat-menu-item>menu 4</button> </a>
+                        </mat-menu>
+                        <button mat-button [matMenuTriggerFor]="progress">Progress</button>
+                        <mat-menu #progress="matMenu">
+                          <button mat-menu-item>Progress 1</button>
+                        </mat-menu>
+                        <button mat-button [matMenuTriggerFor]="status">Status</button>
+                        <mat-menu #status="matMenu">
+                          <button mat-menu-item>Status 1</button>
+                        </mat-menu>
+                        <button mat-button [matMenuTriggerFor]="help">Help</button>
+                        <mat-menu #help="matMenu">
+                                <button mat-menu-item>Help</button>
+                              </mat-menu>
+                            </span>
+                         <span class="spacer"></span>
+                         <button mat-button color="warn" (click) = "doLogOut()">Logout</button>
+                </mat-toolbar-row>
+            </mat-toolbar>
+</div>
+<router-outlet></router-outlet>
+

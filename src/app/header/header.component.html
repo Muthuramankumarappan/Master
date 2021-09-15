@@ -1,0 +1,10 @@
+<div class="header-component">
+    <div class = "view-title">
+    <mat-label class = "heading-label">{{title}}</mat-label>
+    </div>
+    <div *ngIf =  "showButton" class="view-button-row">
+    <button *ngFor = "let functionality of functions" mat-button color="warn" 
+    (click)="functionality.label ==='Download' ? functionality.action('something'): functionality.action()">{{functionality.label}}</button>
+    </div>
+
+</div>

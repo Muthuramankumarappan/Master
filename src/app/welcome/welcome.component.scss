@@ -1,0 +1,25 @@
+.spacer {
+    flex: 1 1 auto;
+  }
+.text-size{
+    font-size: 12px;
+    padding: 20px
+}
+
+.mat-select-panel {
+    background: yellow;
+}
+
+.mat-select-content{
+    width:2000px;
+    background-color: red;
+    font-size: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+a :visited{
+    color: black;
+}
